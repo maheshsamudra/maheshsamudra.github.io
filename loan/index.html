@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.js"></script>
+
+    <style>
+        .uk-form-label {
+            font-size: 1rem;
+        }
+        .summary p {
+            margin: 0;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0; 
+        }
+    </style>
+
+    <script>
+
+        $(function(){
+            calculate();
+            $("input").on('change paste keyup', function(){
+                calculate();
+            });
+        })
+
+        function calculate() {
+            var factor = 100000;
+            var amount = parseInt($('#amount').val());
+            var ir = parseInt($('#ir').val());
+            var months = parseInt($('#months').val());
+
+            if (months > 0 && ir > 0 && amount > 0) {
+                var interest_amount = amount * ir * months / 1200;
+                var total = amount + interest_amount;
+                var R = ir/1200;
+                var installment = ( amount * R * Math.pow((1+R), months) ) / ( (Math.pow((1+R), months) ) - 1 ) * factor;
+
+                $("#installment").text(Math.ceil(installment).toLocaleString());
+
+                var ia = Math.ceil((installment * months - amount * factor));
+                var text = "You are paying Rs. "+ ia.toLocaleString() +" as interest.";
+                $("#int_text").text(text);
+            }
+            else {
+                $("#installment").text("0");
+                $("#int_text").text('');
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-1-2@m uk-margin-auto">
+                <h1 class="uk-text-center uk-h2 uk-margin-large-top">Loan Calculator</h1>
+
+                <hr>
+
+                <form class="uk-form-horizontal uk-margin-large" method="GET" onsubmit="event.preventDefault();" uk-height-viewport="offset-top: true; offset-bottom: true; expand: true;">
+                    
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-horizontal-text">Amount (Rs. in Lakhs)</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input uk-text-center" id="amount" type="number" placeholder="in Lakhs" min="1" max="100" autofocus value="25">
+                        </div>
+                    </div>
+                
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-horizontal-text">Interest Rate (per year) (%)</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input uk-text-center" id="ir" type="number" min="1" max="100" value="13">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-horizontal-text">Time Period (Months)</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input uk-text-center" id="months" type="number" min="1" max="100" value="60">
+                        </div>
+                    </div>
+                
+                    <div class="uk-margin summary">
+                        <p class="uk-h3 uk-text-center uk-margin-large-top">Installment: Rs. <span id="installment">0</span> / month</p>
+                        <p class="uk-h5 uk-text-center" id="int_text"></p>
+                    </div>
+                
+                </form>
+                <hr>
+                <small>
+                    <b>Quicknote:</b><br>
+                    This is free to use. Calculated with Equated Monthly Payments.<br>
+                    But you may not hold me responsible for any loss caused by this. And the resuls are as good as the inputs</small>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
