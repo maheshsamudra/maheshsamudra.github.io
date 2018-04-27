@@ -38,8 +38,8 @@
 
         function calculate() {
             var factor = 100000;
-            var amount = parseInt($('#amount').val());
-            var ir = parseInt($('#ir').val());
+            var amount = parseFloat($('#amount').val());
+            var ir = parseFloat($('#ir').val());
             var months = parseInt($('#months').val());
 
             if (months > 0 && ir > 0 && amount > 0) {
