@@ -1,176 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Mahesh Samudra</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mahesh Samudra [Engineer / Developer]</title>
 
-	<link rel="stylesheet" href="style.css">
-	<script src="app.js"></script>
-	<!-- Inspired from https://codepen.io/mathiesjanssen/pen/ggeBKm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css?v=4" />
+
+    <!-- Object Graphs -->
+	<meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Mahesh Samudra [Engineer / Developer]" />
+    <meta property="og:title" content="Mahesh Samudra [Engineer / Developer]">
+    <meta property="og:description" content="An Engineer, with an inbuilt passion to dive in web development" />
+    <meta property="og:image" content="https://maheshsamudra.lk/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://maheshsamudra.lk" />
+    <meta property="og:type" content="website" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57410157-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-57410157-5');
+    </script>
+
+   
 </head>
-
 <body>
 
-	<div class="container">
-		<div class="header">
-			<img src="mahesh.jpg" class="mahesh" alt="Mahesh Samudra">
-			<h1>Mahesh Samudra</h1>
-			<h2>Engineer / Developer</h2>
-			<h3>
-				<a href="https://stackoverflow.com/story/maheshsamudra"><img src="stck.png" alt="Stackoverflow Profile"></a>
-				<a href="http://maheshsamudra.lk"><img src="blog.png" alt="Personal Blog"></a>
-				<a href="https://www.facebook.com/MaheshSamudra"><img src="facebook.png" alt="Facebook Profile"></a>
-			</h3>
-		</div>
-		<!-- <div class="item">
-			<div id="timeline">
-				<div>
-					<section class="year">
-						<h3>2010</h3>
-						<section>
-							<ul>
-								<li>Started with W3 Schools while at the University, majoring Chemical &amp; Process Engineering.</li>
-							</ul>
-						</section>
-					</section>
+    <header>
+        <div class="uk-container-expand uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="expand: true;">
+            <div class="container">
+                <a class="img-container" href="/">
+                    <img class="portrait" src="/images/mahesh.png" alt="Mahesh">
+                </a>
+                <h1>Mahesh Samudra</h1>
+                <h2>Engineer / Developer</h2>
+                <p>
+                    An Engineer,<br>
+                    <span>with an inbuilt passion</span> <span>to dive in web development</span>
+                </p>
 
-					<section class="year">
-						<h3>2011</h3>
-						<section>
-							<h4>March</h4>
-							<ul>
-								<li>Launched the Chemical &amp; Process Engineering Department's website
-									<a href="http://www.cpe.mrt.ac.lk">www.cpe.mrt.ac.lk</a> (Joomla as the CMS)
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h4>December</h4>
-							<ul>
-								<li>Started volunteering at
-									<a href="http://moraspirit.com">MoraSpirit</a> - The first organization to <a href="http://moraspirit.com/about-us">promote sporting culture</a> in universities in Sri Lanka
-								</li>
-							</ul>
-						</section>
-					</section>
+                <ul class="menu">
+                    <li><a href="#about-me" data-id="about-me">About Me</a></li>
+                    <li><a href="#work" data-id="work">See My Work</a></li>
+                    <li><a href="#say-hello" data-id="say-hello">Say Hello</a></li>
+                    <!-- <li><a target="_blank" href="https://www.facebook.com/MaheshSamudra">Say Hello</a></li> -->
+                </ul>
 
-					<section class="year">
-						<h3>2012</h3>
-						<section>
-							<h4>December</h4>
-							<ul>
-								<li>Joined Envato Community - 
-									<a href="https://themeforest.net/user/maheshsamudra">ThemeForest</a> &amp;
-									<a href="https://codecanyon.net/user/maheshsamudra">CodeCanyon</a>
-								</li>
-							</ul>
-						</section>
-					</section>
-					
-					<section class="year">
-						<h3>2013</h3>
-						<section>
-							<h4>January</h4>
-							<ul>
-								<li>Became the Head of Web Operations at
-									<a href="http://moraspirit.com/moraspirit-crew-2013">MoraSpirit</a>
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h4>March</h4>
-							<ul>
-								<li>Redesigned the MoraSpirit Website from <a href="http://old.moraspirit.com" title="The old website">Joomla</a> to <a href="http://moraspirit.com" title="The new website">Drupal</a></li>
-							</ul>
-						</section>
-						<section>
-							<h4>December</h4>
-							<ul>
-								<li>Built my first commercial website - superiortours.info</li>
-							</ul>
-						</section>
-					</section>
+                <div class="social">
+                    <a target="_blank" href="https://www.facebook.com/MaheshSamudra"><i class="fa fa-facebook-f fa-lg"></i></a>
+                    <a target="_blank" href="https://codepen.io/maheshsamudra"><i class="fa fa-codepen fa-lg"></i></a>
+                    <a target="_blank" href="https://github.com/maheshsamudra"><i class="fa fa-github fa-lg"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/maheshwickramasinghe/"><i class="fa fa-linkedin fa-lg"></i></a>
+                </div>
 
-					<section class="year">
-						<h3>2014</h3>
-						<section>
-							<h4>January</h4>
-							<ul>
-								<li>Launched Second commercial website - 
-									<a href="http://sandg.lk">S &amp; G Associates</a> -  one of the oldest design and built company in Sri Lanka since 1994 located in Colombo.
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h4>May</h4>
-							<ul>
-								<li>Launched Third commercial website - 
-									<a href="http://corsnet.lk">CORSnet</a> -  the first GNSS Network to allow for a single connection point for coverages across Sri Lanka.
-								</li>
-							</ul>
-						</section>
-					</section>
+            </div>
+        </div>
+    </header>
 
-					<section class="year">
-						<h3>2015</h3>
-						<section>
-							<h4>July</h4>
-							<ul>
-								<li>Launched a commercial website - 
-									<a href="http://axiotravel.lk">AXIO Travel</a> - a Luxury Travel & Transportation service with reliable, comfortable, safe and modern vehicles.
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h4>November</h4>
-							<ul>
-								<li>Launched a commercial website - 
-									<a href="http://gogreenexports.com/">GoGreen Exports</a> - one of the largest manufacturers & exporters of coir products from Sri Lanka. Coming from the coconut triangle of Sri Lanka, the company has always been a part of eco-friendly product manufacturing in the country.
-								</li>
-							</ul>
-						</section>
-						<section>
-							<h4>December</h4>
-							<ul>
-								<li>Launched a commercial website - 
-									<a href="http://tents.lk/">Tents.lk</a> - The site is for renting camping equipments - mainly camping tents. Main feature is checking availability before reservation which helps the client to keep track of their rentals.
-								</li>
-							</ul>
-						</section>
-					</section>
+    <div id="about-me" class="uk-flex-top" uk-modal="bg-close:false;esc-close:false">
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
+    
+            <button class="uk-modal-close-default close" type="button" uk-close></button>
+    
+            <div class="uk-text-center">
+                <h2>About Me</h2>
+                <img src="/images/about-me.jpg" alt="About Me - Mahesh">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               
+            </div>
+    
+        </div>
+    </div>
 
-					<section class="year">
-						<h3>2016</h3>
-						<section>
-							<h4>June</h4>
-							<ul>
-								<li>Launched a commercial website - 
-									<a href="http://sarisara.lk">Sarisara</a> - a team of young explorers who wanted to let others experience the thrill of hiking and trekking. The site was made to ensure that their events are heard by all.
-								</li>
-							</ul>
-						</section>
-					</section>
+    <div id="say-hello" class="uk-flex-top" uk-modal="bg-close:false;esc-close:false">
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
+    
+            <button class="uk-modal-close-default close" type="button" uk-close></button>
+    
+            <div>
+                <h2>Say Hello</h2>
+                <form method="post" action="/" onsubmit="event.preventDefault();">
+                    <div uk-grid>
+                        <div class="uk-width-1-2@m">
+                            <label>Name:</label>
+                            <input type="text" name="name" class="uk-input">
+                        </div>
+                        <div class="uk-width-1-2@m">
+                            <label>Email:</label>
+                            <input type="email" name="email" class="uk-input">
+                        </div>
+                        <div class="uk-width-1-1@m">
+                            <label>Message</label>
+                            <textarea name="message" rows="6" class="uk-textarea"></textarea>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <button type="submit" class="uk-button">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+    </div>
 
-					<section class="year">
-						<h3>2017</h3>
-						<section>
-							<h4>June</h4>
-							<ul>
-								<li>Launched a commercial website - 
-									<a href="http://sarisara.lk">Sarisara</a> - a team of young explorers who wanted to let others experience the thrill of hiking and trekking. The site was made to ensure that their events are heard by all.
-								</li>
-							</ul>
-						</section>
-					</section>
+    <div id="work" class="uk-flex-top uk-modal-container" uk-modal="bg-close:false;esc-close:false">
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
+    
+            <button class="uk-modal-close-default close" type="button" uk-close></button>
+    
+            <div class="uk-text-center">
+                <h2>My Work</h2>
+                <div class="uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true">
+
+                    <ul class="uk-slider-items uk-grid">
+
+                      
+                    </ul>
+                
+                    <a class="nav-arrows uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="nav-arrows uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
 
-				</div>
-			</div>
-		</div> -->
-	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <script>
+        $(function(){
+            "use strict";
+
+            var sub_page_id = window.location.hash.substring(1);
+            display_subpage(sub_page_id);
+
+            $("ul.menu > li > a").on('click', function(e){
+                e.stopPropagation();
+                var id = $(this).attr('data-id');
+                display_subpage(id);
+            });
+
+            $('button.close').on('click', function(e){
+                e.preventDefault();
+                $('header').removeClass('active-subpage');
+                history.pushState("", document.title, window.location.pathname);
+            });
+        });
+
+        $(window).on('load', function(){
+            $('body').fadeIn(500);
+        });
+
+        function display_subpage(id = null) {
+            if (id == '') {
+                return;
+            }
+            var modal_name = "#"+id;
+
+            if ($(modal_name).length) {
+                $('header').addClass('active-subpage');
+                console.log(modal_name);
+                UIkit.modal(modal_name).show();
+            }
+
+
+        }
+    </script>
+
+    <noscript>
+        <style>
+            body {
+                display: block;
+            }
+        </style>
+    </noscript>
+
+  
 </body>
-
 </html>
