@@ -6,7 +6,6 @@ html {
 .main-container {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  min-height: 600px;
   position: fixed;
   left: 0;
   top: 0;
@@ -42,7 +41,6 @@ header {
   overflow: hidden;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  min-height: 600px;
 }
 header:after {
   display: block;
