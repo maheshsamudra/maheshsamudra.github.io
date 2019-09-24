@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css?v=4" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css?v=4" />
 
     <!-- Object Graphs -->
-	<meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Mahesh Samudra [Engineer / Developer]" />
     <meta property="og:title" content="Mahesh Samudra [Engineer / Developer]">
     <meta property="og:description" content="An Engineer, with an inbuilt passion to dive in web development" />
@@ -26,21 +28,22 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57410157-5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-57410157-5');
     </script>
 
-   
+
 </head>
+
 <body>
 
     <header>
-        <div class="uk-container-expand uk-flex uk-flex-center uk-flex-middle" uk-height-viewport="expand: true;">
+        <div class="uk-container-expand uk-flex uk-flex-center uk-flex-middle main-container">
             <div class="container">
                 <a class="img-container" href="/">
-                    <img class="portrait" src="/images/mahesh.png" alt="Mahesh">
+                    <img class="portrait" src="images/mahesh.png" alt="Mahesh">
                 </a>
                 <h1>Mahesh Samudra</h1>
                 <h2>Engineer / Developer</h2>
@@ -54,129 +57,24 @@
                 </ul>
 
                 <div class="social">
-                    <a target="_blank" href="https://www.facebook.com/MaheshSamudra"><i class="fa fa-facebook-f fa-lg"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/MaheshSamudra"><i
+                            class="fa fa-facebook-f fa-lg"></i></a>
                     <a target="_blank" href="https://codepen.io/maheshsamudra"><i class="fa fa-codepen fa-lg"></i></a>
                     <a target="_blank" href="https://github.com/maheshsamudra"><i class="fa fa-github fa-lg"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/maheshwickramasinghe/"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/maheshwickramasinghe/"><i
+                            class="fa fa-linkedin fa-lg"></i></a>
                 </div>
 
             </div>
         </div>
     </header>
 
-    <div id="about-me" class="uk-flex-top" uk-modal="bg-close:false;esc-close:false">
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
-    
-            <button class="uk-modal-close-default close" type="button" uk-close></button>
-    
-            <div class="uk-text-center">
-                <h2>About Me</h2>
-                <img src="/images/about-me.jpg" alt="About Me - Mahesh">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-               
-            </div>
-    
-        </div>
-    </div>
-
-    <div id="say-hello" class="uk-flex-top" uk-modal="bg-close:false;esc-close:false">
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
-    
-            <button class="uk-modal-close-default close" type="button" uk-close></button>
-    
-            <div>
-                <h2>Say Hello</h2>
-                <form method="post" action="/" onsubmit="event.preventDefault();">
-                    <div uk-grid>
-                        <div class="uk-width-1-2@m">
-                            <label>Name:</label>
-                            <input type="text" name="name" class="uk-input">
-                        </div>
-                        <div class="uk-width-1-2@m">
-                            <label>Email:</label>
-                            <input type="email" name="email" class="uk-input">
-                        </div>
-                        <div class="uk-width-1-1@m">
-                            <label>Message</label>
-                            <textarea name="message" rows="6" class="uk-textarea"></textarea>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <button type="submit" class="uk-button">
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-    
-        </div>
-    </div>
-
-    <div id="work" class="uk-flex-top uk-modal-container" uk-modal="bg-close:false;esc-close:false">
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical subpage">
-    
-            <button class="uk-modal-close-default close" type="button" uk-close></button>
-    
-            <div class="uk-text-center">
-                <h2>My Work</h2>
-                <div class="uk-position-relative uk-visible-toggle uk-dark" uk-slider="center: true">
-
-                    <ul class="uk-slider-items uk-grid">
-
-                      
-                    </ul>
-                
-                    <a class="nav-arrows uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="nav-arrows uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-                
-                </div>
-            </div>
-    
-        </div>
-    </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
     <script>
-        $(function(){
-            "use strict";
-
-            var sub_page_id = window.location.hash.substring(1);
-            display_subpage(sub_page_id);
-
-            $("ul.menu > li > a").on('click', function(e){
-                e.stopPropagation();
-                var id = $(this).attr('data-id');
-                display_subpage(id);
-            });
-
-            $('button.close').on('click', function(e){
-                e.preventDefault();
-                $('header').removeClass('active-subpage');
-                history.pushState("", document.title, window.location.pathname);
-            });
-        });
-
-        $(window).on('load', function(){
-            $('body').fadeIn(500);
-        });
-
-        function display_subpage(id = null) {
-            if (id == '') {
-                return;
-            }
-            var modal_name = "#"+id;
-
-            if ($(modal_name).length) {
-                $('header').addClass('active-subpage');
-                console.log(modal_name);
-                UIkit.modal(modal_name).show();
-            }
 
 
-        }
+
     </script>
 
     <noscript>
@@ -187,6 +85,7 @@
         </style>
     </noscript>
 
-  
+
 </body>
+
 </html>
