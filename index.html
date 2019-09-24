@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Object Graphs -->
     <meta property="og:locale" content="en_US" />
@@ -19,8 +19,6 @@
     <meta property="og:title" content="Mahesh Samudra [Engineer / Developer]">
     <meta property="og:description" content="An Engineer, with an inbuilt passion to dive in web development" />
     <meta property="og:image" content="https://maheshsamudra.lk/images/og.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://maheshsamudra.lk" />
     <meta property="og:type" content="website" />
 
@@ -73,14 +71,29 @@
 
     <script>
 
+        var vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+        // The basic check
+        function loaded() {
+            document.body.classList.add('visible')
+        }
+
+        // Polling for the sake of my intern tests
+        var interval = setInterval(function () {
+            if (document.readyState === 'complete') {
+                clearInterval(interval);
+                loaded();
+            }
+        }, 100);
 
     </script>
 
     <noscript>
         <style>
             body {
-                display: block;
+                opacity: 1 !important;
             }
         </style>
     </noscript>

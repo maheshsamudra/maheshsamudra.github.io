@@ -1,5 +1,5 @@
 /images/*
    Cache-Control: public, max-age=3600000
 
-/styles.css
+/style.css
    Cache-Control: public, max-age=3600000

@@ -11,10 +11,19 @@ html {
 
 .main-container {
   height: 100vh;
+  height: calc(~"var(--vh, 1vh) * 100");
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 body {
-  // display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  &.visible {
+    opacity: 1;
+  }
 }
 
 body,
