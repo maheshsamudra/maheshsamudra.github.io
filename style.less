@@ -16,6 +16,7 @@ html {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 4;
 }
 
 body {
@@ -49,6 +50,8 @@ blockquote {
 header {
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  height: calc(~"var(--vh, 1vh) * 100");
   &:after {
     display: block;
     content: "";
@@ -61,6 +64,7 @@ header {
     background-size: cover;
     transform: scale(1.125);
     .transition(all, 0.3s);
+    z-index: 1;
   }
   &:before {
     display: block;
@@ -79,7 +83,7 @@ header {
     background-position: center, center;
     background-size: auto, 256px 256px;
     background-repeat: no-repeat, repeat;
-    z-index: 1;
+    z-index: 2;
   }
 
   div.container {
