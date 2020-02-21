@@ -1,3 +1,5 @@
+@import "./reset.less";
+
 /* latin */
 @font-face {
   font-family: "Alegreya Sans";
@@ -346,45 +348,6 @@ header {
   }
 }
 
-.uk-modal {
-  background: transparent !important;
-  padding: 0;
-  .uk-modal-body {
-    background: transparent;
-    overflow: hidden;
-    padding: 0;
-    //background: white;
-    &:before {
-      z-index: -1;
-      background: fade(white, 95%);
-      position: absolute;
-      content: "";
-      display: block;
-      left: -20%;
-      right: -20%;
-      bottom: -20%;
-      top: -20%;
-      -webkit-filter: blur(0.1rem);
-      -moz-filter: blur(0.1rem);
-      -o-filter: blur(0.1rem);
-      -ms-filter: blur(0.1rem);
-      filter: blur(0.1rem);
-    }
-    & > div {
-      z-index: 2;
-      padding: 30px;
-      position: relative;
-      p {
-        color: black;
-      }
-    }
-    textarea {
-      resize: vertical;
-      width: 100%;
-    }
-  }
-}
-
 @keyframes ripple {
   0% {
     transform: scale(1);
@@ -400,37 +363,5 @@ header {
   100% {
     transform: scale(1.5);
     opacity: 0;
-  }
-}
-
-.nav-arrows {
-  .transition(opacity);
-  svg {
-    transform: scale(2);
-  }
-}
-
-.uk-slider-items {
-  li {
-    opacity: 0.5;
-    &.uk-active {
-      opacity: 1;
-    }
-    .uk-panel {
-      img {
-        display: block;
-        margin: auto;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        text-align: center;
-        color: black;
-      }
-    }
   }
 }
